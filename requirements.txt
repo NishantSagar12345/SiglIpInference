@@ -1,0 +1,9 @@
+# All of these are preinstalled on Kaggle GPU notebooks; versions used are recorded in results/environment.json.
+torch>=2.1
+torchvision>=0.16        # CIFAR-10 download (falls back to `datasets` if the download fails)
+transformers>=4.40       # SigLIP vision model with SDPA attention; tested against 4.46 and 5.x module layouts
+numpy
+pandas
+matplotlib
+pillow
+sentencepiece            # SigLIP text tokenizer (Experiment E)

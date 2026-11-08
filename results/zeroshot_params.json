@@ -1,0 +1,58 @@
+{
+  "model_id": "google/siglip-base-patch16-224",
+  "model_class": "SiglipModel",
+  "dataset": "torchvision.datasets.CIFAR10(train=False)",
+  "n_images": 10000,
+  "classes": [
+    "airplane",
+    "automobile",
+    "bird",
+    "cat",
+    "deer",
+    "dog",
+    "frog",
+    "horse",
+    "ship",
+    "truck"
+  ],
+  "prompt_template": "a photo of a {}.",
+  "prompts": [
+    "a photo of a airplane.",
+    "a photo of a automobile.",
+    "a photo of a bird.",
+    "a photo of a cat.",
+    "a photo of a deer.",
+    "a photo of a dog.",
+    "a photo of a frog.",
+    "a photo of a horse.",
+    "a photo of a ship.",
+    "a photo of a truck."
+  ],
+  "text_max_length": 64,
+  "eval_dtype": "float16",
+  "logits_dtype": "float32",
+  "attn_impl": "sdpa",
+  "eval_batch_size": 128,
+  "eval_wall_seconds_all_configs_incl_cpu_preprocessing": 76.23224405999997,
+  "latency_batch_sizes": [
+    16,
+    64
+  ],
+  "warmup_iters": 10,
+  "timed_reps": 30,
+  "n_boot": 10000,
+  "seed": 42,
+  "validation_images": 32,
+  "logit_scale_exp": 117.33076477050781,
+  "logit_bias": -12.9324369430542,
+  "token_configs": {
+    "196": 196,
+    "144": 144,
+    "100": 100,
+    "49": 49
+  },
+  "transformers": "5.20.2",
+  "torch": "2.11.0+cu130",
+  "gpu_name": "Tesla T4",
+  "timestamp_utc": "2026-11-08T15:00:33Z"
+}

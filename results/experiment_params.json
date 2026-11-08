@@ -1,0 +1,57 @@
+{
+  "model_id": "google/siglip-base-patch16-224",
+  "seed": 42,
+  "n_images": 256,
+  "dataset": "torchvision.datasets.CIFAR10(train=False)",
+  "image_indices": "0..255 of the test split",
+  "original_resolution": "32x32 (upsampled to 224x224 by the SigLIP processor)",
+  "processor": {
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "image_processor_type": "SiglipImageProcessor",
+    "image_std": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "size": {
+      "height": 224,
+      "width": 224
+    },
+    "do_convert_rgb": true
+  },
+  "batch_sizes": [
+    1,
+    8,
+    16
+  ],
+  "warmup_iters": 10,
+  "timed_reps": 50,
+  "benchmark_dtype": "float16",
+  "attn_impls": [
+    "sdpa",
+    "eager"
+  ],
+  "primary_attn_impl": "sdpa",
+  "timing_modes": [
+    "encoder_only",
+    "selection_only",
+    "full_pipeline"
+  ],
+  "timer": "time.perf_counter with torch.cuda.synchronize before and after",
+  "token_configs": {
+    "196": 196,
+    "144": 144,
+    "100": 100,
+    "49": 49
+  },
+  "selection_rule": "rows=cols=round(linspace(0,13,k)); keep Cartesian product, row-major"
+}

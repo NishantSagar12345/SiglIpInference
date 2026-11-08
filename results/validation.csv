@@ -1,0 +1,9 @@
+check,attn_impl,dtype,batch,max_abs_diff_last_hidden,max_abs_diff_pooled,max_abs_diff_identity_vs_noselect,min_cosine_pooled,atol,passed,num_tokens,max_abs_err,cosine_mean,cosine_min
+baseline_vs_hf_forward,sdpa,torch.float32,8.0,0.0,0.0,0.0,0.9999999403953552,0.0001,True,,,,
+positional_preservation,sdpa,torch.float32,,,,,,,True,196.0,0.0,,
+positional_preservation,sdpa,torch.float32,,,,,,,True,144.0,0.0,,
+positional_preservation,sdpa,torch.float32,,,,,,,True,100.0,0.0,,
+positional_preservation,sdpa,torch.float32,,,,,,,True,49.0,0.0,,
+baseline_vs_hf_forward,sdpa,torch.float16,8.0,0.0,0.0,0.0,0.9999998807907104,0.01,True,,,,
+precision_noise_floor_float16_vs_fp32_196,sdpa,,,,,,,,,,,0.9999948740005493,0.9999481439590454
+baseline_vs_hf_forward,eager,torch.float16,8.0,0.0,0.0,0.0,0.9999998807907104,0.01,True,,,,

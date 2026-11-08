@@ -1,0 +1,23 @@
+{
+  "logits": {
+    "n_images": 32,
+    "n_prompts": 10,
+    "dtype": "torch.float32",
+    "logits_shape": [
+      32,
+      10
+    ],
+    "max_abs_diff_logits": 1.9073486328125e-06,
+    "max_abs_ref_logit": 18.073047637939453,
+    "max_abs_diff_image_embeds": 0.0,
+    "max_abs_diff_text_embeds": 0.0,
+    "argmax_agreement": 1.0,
+    "atol": 0.0001,
+    "rtol": 1e-05,
+    "passed": true
+  },
+  "precision_check": {
+    "n_images": 32,
+    "prediction_agreement": 1.0
+  }
+}
